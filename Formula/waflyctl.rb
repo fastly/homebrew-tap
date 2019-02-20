@@ -13,18 +13,16 @@ class Waflyctl < Formula
   end
 
   def install
-    def install
-      if build.head?
-        ENV["GOPATH"] = buildpath
-        (buildpath/"src/github.com/fastly/waflyctl").install buildpath.children
-        cd "src/github.com/fastly/waflyctl" do
-          system "dep", "ensure", "-vendor-only"
-          system "go", "build", "-o", buildpath/"waflyctl"
-        end
+    if build.head?
+      ENV["GOPATH"] = buildpath
+      (buildpath/"src/github.com/fastly/waflyctl").install buildpath.children
+      cd "src/github.com/fastly/waflyctl" do
+        system "dep", "ensure", "-vendor-only"
+        system "go", "build", "-o", buildpath/"waflyctl"
       end
-    
-      bin.install "waflyctl"
     end
+
+    bin.install "waflyctl"
   end
 
   test do
