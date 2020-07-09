@@ -2,21 +2,21 @@
 class Fastly < Formula
   desc "Fastly CLI"
   homepage "https://github.com/fastly/cli"
-  version "0.15.0"
+  version "0.16.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/fastly/cli/releases/download/v0.15.0/fastly_v0.15.0_darwin-amd64.tar.gz"
-    sha256 "9f234c98468e9240066f650a3c62f11789852949c9a00cab2f10b4d5142bc6b5"
+    url "https://github.com/fastly/cli/releases/download/v0.16.0/fastly_v0.16.0_darwin-amd64.tar.gz"
+    sha256 "93900e629c36e0cbf7028a66762bc491b0eded2ee2f871c9a078f3108be1f423"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v0.15.0/fastly_v0.15.0_linux-amd64.tar.gz"
-      sha256 "6812ecfca75feb63668ce29d22be37247dd70ef280e3b0fe3b0cf8bc5658c752"
+      url "https://github.com/fastly/cli/releases/download/v0.16.0/fastly_v0.16.0_linux-amd64.tar.gz"
+      sha256 "2d739ac3c90c920d51245c07a08b60c6723128bd628ddaa37887a7fc082d0d1b"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fastly/cli/releases/download/v0.15.0/fastly_v0.15.0_linux-arm64.tar.gz"
-        sha256 "208bb0db8ef9f889b32bb291f6ccc0b398cba4ae016ce6c69ba132de171ef486"
+        url "https://github.com/fastly/cli/releases/download/v0.16.0/fastly_v0.16.0_linux-arm64.tar.gz"
+        sha256 "47e112cfc4b64867c646e6394c11916fbb93cdede35c631d1d47dcc219ccdfbc"
       else
       end
     end
