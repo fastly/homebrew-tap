@@ -5,24 +5,29 @@
 class Fastly < Formula
   desc "Fastly CLI"
   homepage "https://github.com/fastly/cli"
-  version "0.31.0"
+  version "0.32.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/fastly/cli/releases/download/v0.31.0/fastly_v0.31.0_darwin-amd64.tar.gz"
-    sha256 "61f576b634a929ce043c8d6244ce5df6b7a4b184d82dc3089b68dae4ffd19eb0"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/fastly/cli/releases/download/v0.32.0/fastly_v0.32.0_darwin-amd64.tar.gz"
+      sha256 "9f8a98132f51c85a20d98ba570a25d359f0fbd452b13a2fdbcd2c9c1f043e4ad"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/fastly/cli/releases/download/v0.32.0/fastly_v0.32.0_darwin-arm64.tar.gz"
+      sha256 "4bf23bcc2569d7692b1af25cafade15a120ae5092ae96bec27b0655329727383"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/fastly/cli/releases/download/v0.31.0/fastly_v0.31.0_darwin-arm64.tar.gz"
-    sha256 "a4983723705456fdf70718d2069befd52f19c15099e6c850ad1fcf477f8330f1"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/fastly/cli/releases/download/v0.31.0/fastly_v0.31.0_linux-amd64.tar.gz"
-    sha256 "9ea38112243f981bbdaadf66c26fc9e5300e63e34b278b10ebeb80b978008c69"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/fastly/cli/releases/download/v0.31.0/fastly_v0.31.0_linux-arm64.tar.gz"
-    sha256 "339327a8f89e2c1020978b39f2ae2aa77117d3e8f47bc378594e697d82258212"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/fastly/cli/releases/download/v0.32.0/fastly_v0.32.0_linux-amd64.tar.gz"
+      sha256 "b3cb5f7e6895af01ec4c8a12eed8ecf2031869b3021bd4c9e4abe31e5c4c2486"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fastly/cli/releases/download/v0.32.0/fastly_v0.32.0_linux-arm64.tar.gz"
+      sha256 "d684bfbe1d1d0f2d980d555388a7562f872be6af1f55f60fdd63ad1f75b4b5b4"
+    end
   end
 
   head do
