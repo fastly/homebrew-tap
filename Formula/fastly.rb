@@ -5,41 +5,61 @@
 class Fastly < Formula
   desc "Fastly CLI"
   homepage "https://github.com/fastly/cli"
-  version "0.42.0"
-  bottle :unneeded
+  version "0.43.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v0.42.0/fastly_v0.42.0_darwin-amd64.tar.gz"
-      sha256 "01d23189442fa66c41572c6f18709bc80fa1977d3dc9033ee090d68157da0416"
+      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_darwin-amd64.tar.gz"
+      sha256 "c2af4749fcbc447422a64a2e2cf6dcdb3af9223391d4c90c15b84b3229e368cf"
+
+      def install
+        system "make" if build.head?
+        bin.install "fastly"
+        (bash_completion/"fastly.sh").write `#{bin}/fastly --completion-script-bash`
+        (zsh_completion/"_fastly").write `#{bin}/fastly --completion-script-zsh`
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fastly/cli/releases/download/v0.42.0/fastly_v0.42.0_darwin-arm64.tar.gz"
-      sha256 "676f76f71d188391a3687979e75b8ea75fbd5ba0f3a81694bbdd981402312b2e"
+      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_darwin-arm64.tar.gz"
+      sha256 "fbf2c1c0addaff325d4310d71e7267e01d42d2f24901d8479f8507af5b4a4be8"
+
+      def install
+        system "make" if build.head?
+        bin.install "fastly"
+        (bash_completion/"fastly.sh").write `#{bin}/fastly --completion-script-bash`
+        (zsh_completion/"_fastly").write `#{bin}/fastly --completion-script-zsh`
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v0.42.0/fastly_v0.42.0_linux-amd64.tar.gz"
-      sha256 "b2e515299a1575225da2efc637c55bc56e81145ad2504dac5d4238b5b0d18c46"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fastly/cli/releases/download/v0.42.0/fastly_v0.42.0_linux-arm64.tar.gz"
-      sha256 "d0daff27f0e8f943b38b31a973fe425ff728e239236be9491d4058ebec5fb4f9"
+      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_linux-arm64.tar.gz"
+      sha256 "b3ca3c02238d48ff1779288c012929c2ddbda365390acc2b750ee6b8ff87e5d5"
+
+      def install
+        system "make" if build.head?
+        bin.install "fastly"
+        (bash_completion/"fastly.sh").write `#{bin}/fastly --completion-script-bash`
+        (zsh_completion/"_fastly").write `#{bin}/fastly --completion-script-zsh`
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_linux-amd64.tar.gz"
+      sha256 "a61fb2193bbff299ff02eae05739bfc236cf2b8f0a0ac79c463aeeff94be151e"
+
+      def install
+        system "make" if build.head?
+        bin.install "fastly"
+        (bash_completion/"fastly.sh").write `#{bin}/fastly --completion-script-bash`
+        (zsh_completion/"_fastly").write `#{bin}/fastly --completion-script-zsh`
+      end
     end
   end
 
   head do
     url "https://github.com/fastly/cli.git"
     depends_on "go"
-  end
-
-  def install
-    system "make" if build.head?
-    bin.install "fastly"
-    (bash_completion/"fastly.sh").write `#{bin}/fastly --completion-script-bash`
-    (zsh_completion/"_fastly").write `#{bin}/fastly --completion-script-zsh`
   end
 
   test do
