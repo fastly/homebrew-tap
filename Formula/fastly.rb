@@ -5,12 +5,12 @@
 class Fastly < Formula
   desc "Fastly CLI"
   homepage "https://github.com/fastly/cli"
-  version "0.43.0"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_darwin-amd64.tar.gz"
-      sha256 "c2af4749fcbc447422a64a2e2cf6dcdb3af9223391d4c90c15b84b3229e368cf"
+      url "https://github.com/fastly/cli/releases/download/v1.0.0/fastly_v1.0.0_darwin-amd64.tar.gz"
+      sha256 "322a91a5897b90a209d89758c537492a5fb8c219ecb947dc18c29775fcf5ca48"
 
       def install
         system "make" if build.head?
@@ -20,8 +20,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_darwin-arm64.tar.gz"
-      sha256 "fbf2c1c0addaff325d4310d71e7267e01d42d2f24901d8479f8507af5b4a4be8"
+      url "https://github.com/fastly/cli/releases/download/v1.0.0/fastly_v1.0.0_darwin-arm64.tar.gz"
+      sha256 "00cec774c9e87ea83b90b90d807dfea2b57da97001415164e409c7160ede7496"
 
       def install
         system "make" if build.head?
@@ -34,8 +34,8 @@ class Fastly < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_linux-arm64.tar.gz"
-      sha256 "b3ca3c02238d48ff1779288c012929c2ddbda365390acc2b750ee6b8ff87e5d5"
+      url "https://github.com/fastly/cli/releases/download/v1.0.0/fastly_v1.0.0_linux-arm64.tar.gz"
+      sha256 "e91b7a4781a95cc8038631c07ff84bff773d1075a138689668102703399025b2"
 
       def install
         system "make" if build.head?
@@ -45,8 +45,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v0.43.0/fastly_v0.43.0_linux-amd64.tar.gz"
-      sha256 "a61fb2193bbff299ff02eae05739bfc236cf2b8f0a0ac79c463aeeff94be151e"
+      url "https://github.com/fastly/cli/releases/download/v1.0.0/fastly_v1.0.0_linux-amd64.tar.gz"
+      sha256 "749e45fbfd7d90b3c501260efa9fe8e2b66151d07ad4c80dc5b465e57bd06e95"
 
       def install
         system "make" if build.head?
