@@ -5,12 +5,12 @@
 class Fastly < Formula
   desc "A CLI for interacting with the Fastly platform"
   homepage "https://github.com/fastly/cli"
-  version "3.2.1"
+  version "3.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fastly/cli/releases/download/v3.2.1/fastly_v3.2.1_darwin-arm64.tar.gz"
-      sha256 "9b5a078b9788fbcd09cfa1c865579231d7dceabbd10c35daa849c084d0924213"
+      url "https://github.com/fastly/cli/releases/download/v3.2.2/fastly_v3.2.2_darwin-arm64.tar.gz"
+      sha256 "3d63dac61d58ac0fc839df213cb66248d277250f9f7a9367c62348670e081260"
 
       def install
         system "make" if build.head?
@@ -20,8 +20,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v3.2.1/fastly_v3.2.1_darwin-amd64.tar.gz"
-      sha256 "d1353ca58aa427fd8dca6116086ef739d4d3c55163a85dd9a903df2b2cc94974"
+      url "https://github.com/fastly/cli/releases/download/v3.2.2/fastly_v3.2.2_darwin-amd64.tar.gz"
+      sha256 "343b859d66e286e01b6127abdda8b841f85f6b41e7bbe69cd341e523daaea794"
 
       def install
         system "make" if build.head?
@@ -34,8 +34,8 @@ class Fastly < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v3.2.1/fastly_v3.2.1_linux-amd64.tar.gz"
-      sha256 "4ee75e93272d1ddc4375e1147db09ecf089f8d078a5f31d23680ad7f95a24279"
+      url "https://github.com/fastly/cli/releases/download/v3.2.2/fastly_v3.2.2_linux-amd64.tar.gz"
+      sha256 "bd1fea94b1220bbc541ba2be4a5f5a32520ba12a4ff5f83817e162e1186c63eb"
 
       def install
         system "make" if build.head?
@@ -45,8 +45,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fastly/cli/releases/download/v3.2.1/fastly_v3.2.1_linux-arm64.tar.gz"
-      sha256 "729c8edfbe56b0d746e95c626e92dcc5cbafd9b5044f8b1a7f0866f09bb8750c"
+      url "https://github.com/fastly/cli/releases/download/v3.2.2/fastly_v3.2.2_linux-arm64.tar.gz"
+      sha256 "a523a3a3b9f12e5e5b30a80e1d4955ae2271e6aeeda0b3f56fa9049e1189fd36"
 
       def install
         system "make" if build.head?
