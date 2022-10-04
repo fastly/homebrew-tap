@@ -5,12 +5,12 @@
 class Fastly < Formula
   desc "A CLI for interacting with the Fastly platform"
   homepage "https://github.com/fastly/cli"
-  version "3.3.0"
+  version "4.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v3.3.0/fastly_v3.3.0_darwin-amd64.tar.gz"
-      sha256 "6ec7ea39d47f7fdca66eb0be66cf7e90f658fa049153529c6d72645dd4956346"
+      url "https://github.com/fastly/cli/releases/download/v4.0.0/fastly_v4.0.0_darwin-amd64.tar.gz"
+      sha256 "d9f14b6b713817538dbfa32b6ac510c2b5dc057b1d69ac1bb8c86139685f2360"
 
       def install
         system "make" if build.head?
@@ -20,8 +20,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fastly/cli/releases/download/v3.3.0/fastly_v3.3.0_darwin-arm64.tar.gz"
-      sha256 "955aa9d738d70a9cb82ff1fd3741ed85782045ed5bd73aca14efb6122923d2bd"
+      url "https://github.com/fastly/cli/releases/download/v4.0.0/fastly_v4.0.0_darwin-arm64.tar.gz"
+      sha256 "55776dbe0963ba12592f8f74bcfc60569ff91d04370027d31e4d4f944b1eccf2"
 
       def install
         system "make" if build.head?
@@ -34,8 +34,8 @@ class Fastly < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fastly/cli/releases/download/v3.3.0/fastly_v3.3.0_linux-arm64.tar.gz"
-      sha256 "05d58cf7336e277c3fe80ef74669e5e307e1c94f932cccc9dd1291c3f3dde2ca"
+      url "https://github.com/fastly/cli/releases/download/v4.0.0/fastly_v4.0.0_linux-arm64.tar.gz"
+      sha256 "99818c0b5933581c99c4215bb4bfe0265a5e77e149f1327d1e3a665a6ba41538"
 
       def install
         system "make" if build.head?
@@ -45,8 +45,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v3.3.0/fastly_v3.3.0_linux-amd64.tar.gz"
-      sha256 "07d1a6da3b9daeaf9e7fceb93e6fd74f72a77e3ce298945a481e074d4be8d601"
+      url "https://github.com/fastly/cli/releases/download/v4.0.0/fastly_v4.0.0_linux-amd64.tar.gz"
+      sha256 "66379802df2100f71a5efab275f0d9323988ce4d4885601de9e354dfa1911de4"
 
       def install
         system "make" if build.head?
