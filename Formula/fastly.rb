@@ -10,7 +10,7 @@ class Fastly < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/fastly/cli/releases/download/v10.2.4/fastly_v10.2.4_darwin-arm64.tar.gz"
-      sha256 "ebfc7789e7eaca55f748d49ea6ab468a4c2898b25ca4508cd6b3bb7f5c402951"
+      sha256 "5bf42bbe7fc3d051149fd5a29688e1a493c497c2bc1b6a3394afe85116eac94e"
 
       def install
         system "make" if build.head?
@@ -21,7 +21,7 @@ class Fastly < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/fastly/cli/releases/download/v10.2.4/fastly_v10.2.4_darwin-amd64.tar.gz"
-      sha256 "d47994ace495a5cd924192888383be47509eb52096a6a61f46a53fb76b9944cb"
+      sha256 "c05af96de9428712b4482a9dea38098adab520b2d53aeaf51b14c85c51c22d63"
 
       def install
         system "make" if build.head?
@@ -35,7 +35,7 @@ class Fastly < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/fastly/cli/releases/download/v10.2.4/fastly_v10.2.4_linux-amd64.tar.gz"
-      sha256 "272f76bad5da1925c94251b7d9d326e28993e91f2c2a8def49afc9cf52df1ea0"
+      sha256 "170c486cf8a43ba0cc800f97267df1588b8df91a95e52afd0f007d05128e0d56"
 
       def install
         system "make" if build.head?
@@ -46,7 +46,7 @@ class Fastly < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/fastly/cli/releases/download/v10.2.4/fastly_v10.2.4_linux-arm64.tar.gz"
-      sha256 "0c981167e22e0f4aa764b89790e40a7668d95a2157e420f9b2effadec6ae5471"
+      sha256 "d04874e68789e01357a27140e01c738ae69e9fdec06cc96d0befb79017b7be1d"
 
       def install
         system "make" if build.head?
