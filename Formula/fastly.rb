@@ -5,12 +5,12 @@
 class Fastly < Formula
   desc "A CLI for interacting with the Fastly platform"
   homepage "https://github.com/fastly/cli"
-  version "10.8.2"
+  version "10.8.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v10.8.2/fastly_v10.8.2_darwin-amd64.tar.gz"
-      sha256 "57dabda94c593f40e846a5f8a046e8609778b26aa6a5d86d7fe0fea9a04ae5de"
+    if Hardware::CPU.arm?
+      url "https://github.com/fastly/cli/releases/download/v10.8.3/fastly_v10.8.3_darwin-arm64.tar.gz"
+      sha256 "c600f0e5438b703dc488a0aa54db52d20d6641c744a2c3bd7a1b82f907efe8e1"
 
       def install
         system "make" if build.head?
@@ -19,9 +19,9 @@ class Fastly < Formula
         (zsh_completion/"_fastly").write `#{bin}/fastly --completion-script-zsh`
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fastly/cli/releases/download/v10.8.2/fastly_v10.8.2_darwin-arm64.tar.gz"
-      sha256 "dccae6f8cb1df12009ea263bebd83dcad86310eaa7622c57b60def9efece19a7"
+    if Hardware::CPU.intel?
+      url "https://github.com/fastly/cli/releases/download/v10.8.3/fastly_v10.8.3_darwin-amd64.tar.gz"
+      sha256 "34447d63aa64c98c53cfcdf8f3163ae185cb9729c345bc4e0bf05ca84a26e963"
 
       def install
         system "make" if build.head?
@@ -33,9 +33,9 @@ class Fastly < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fastly/cli/releases/download/v10.8.2/fastly_v10.8.2_linux-arm64.tar.gz"
-      sha256 "f061dd3378357676c276aef2782c6a16a85cd8591721cd7d5e80d5e55f094c9d"
+    if Hardware::CPU.intel?
+      url "https://github.com/fastly/cli/releases/download/v10.8.3/fastly_v10.8.3_linux-amd64.tar.gz"
+      sha256 "dc0d74855018e7bcb17a6ce8a914469f00c695d35a894da10b0efdc6a09cd7e1"
 
       def install
         system "make" if build.head?
@@ -44,9 +44,9 @@ class Fastly < Formula
         (zsh_completion/"_fastly").write `#{bin}/fastly --completion-script-zsh`
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v10.8.2/fastly_v10.8.2_linux-amd64.tar.gz"
-      sha256 "6f2e8ade2bbea00ee0476c26c1777ac7b9509201b47cf3b36c40ff16b057b42f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fastly/cli/releases/download/v10.8.3/fastly_v10.8.3_linux-arm64.tar.gz"
+      sha256 "5c03f16187f1966db2a8816e26caa58bfc1e9a54816c308fca358bd45b3f3402"
 
       def install
         system "make" if build.head?
