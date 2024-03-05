@@ -1,5 +1,5 @@
 # Homebrew tap
-Homebrew tap repository that provides formula for public Fastly binaries, such as the [Fastly CLI](https://github.com/fastly/cli) or [waflyctl](https://github.com/fastly/waflyctl).
+Homebrew tap repository that provides formula for public Fastly binaries, such as the [Fastly CLI](https://github.com/fastly/cli), [Next-Gen WAF core command line utility](https://docs.fastly.com/en/ngwaf/using-the-ngwaf-core-command-line-utility), or [waflyctl](https://github.com/fastly/waflyctl).
 
 **Note:** the formulae content of this repository is automatically generated.
 
@@ -14,6 +14,12 @@ To install individual formula:
 ### Fastly CLI
 ```
 brew install fastly/tap/fastly
+```
+
+### Next-Gen WAF core command line utility
+
+```
+brew install fastly/tap/ngwafctl
 ```
 
 ### waflyctl
