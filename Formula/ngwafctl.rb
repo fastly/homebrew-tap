@@ -5,12 +5,12 @@
 class Ngwafctl < Formula
   desc "A CLI for interacting with the Next-Gen WAF platform"
   homepage "https://docs.fastly.com/en/ngwaf/using-the-ngwaf-core-command-line-utility"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://dl.signalsciences.net/ngwafctl/0.1.0/ngwafctl_0.1.0_darwin_arm64.tar.gz"
-      sha256 "cd61f0c6cba67608076b599326bd9b277c076c5aa772f9e9d4ad99b1afd870b8"
+      url "https://dl.signalsciences.net/ngwafctl/0.2.0/ngwafctl_0.2.0_darwin_arm64.tar.gz"
+      sha256 "4aa73623dd4afc38639ccf1ce8c7ebe1e24e17051a56c2ba7bd4cbb33a64f659"
 
       def install
         bin.install "ngwafctl"
@@ -19,8 +19,8 @@ class Ngwafctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.signalsciences.net/ngwafctl/0.1.0/ngwafctl_0.1.0_darwin_amd64.tar.gz"
-      sha256 "6886146afc04d348ce7e81b6f999144aad144a7b874851d15fd5da44ada0e9f5"
+      url "https://dl.signalsciences.net/ngwafctl/0.2.0/ngwafctl_0.2.0_darwin_amd64.tar.gz"
+      sha256 "a5fd08cc09b53ca5e2cb9073f6c041904ecc539336c7d61a69b5ee5d794fdaa3"
 
       def install
         bin.install "ngwafctl"
@@ -32,8 +32,8 @@ class Ngwafctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://dl.signalsciences.net/ngwafctl/0.1.0/ngwafctl_0.1.0_linux_amd64.tar.gz"
-      sha256 "4e46d2ba7660e1d4390af887f000e52714bc8e13c0da80c2db36b8bc75e1b0f8"
+      url "https://dl.signalsciences.net/ngwafctl/0.2.0/ngwafctl_0.2.0_linux_amd64.tar.gz"
+      sha256 "8be19346e23537b8cd5e3414632ea91355b865f0784aba14cb15bd3c2d0f5d6b"
 
       def install
         bin.install "ngwafctl"
@@ -42,8 +42,8 @@ class Ngwafctl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.signalsciences.net/ngwafctl/0.1.0/ngwafctl_0.1.0_linux_arm64.tar.gz"
-      sha256 "2a9ba2a08cd91423d84c767f9d0a989bda5c146d90a0aace22c304dfed42295f"
+      url "https://dl.signalsciences.net/ngwafctl/0.2.0/ngwafctl_0.2.0_linux_arm64.tar.gz"
+      sha256 "e9a4479069e228b034bbffd631de75ed01d091770ed3f64c34a435da5fc898c6"
 
       def install
         bin.install "ngwafctl"
