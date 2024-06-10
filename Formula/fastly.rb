@@ -5,12 +5,12 @@
 class Fastly < Formula
   desc "A CLI for interacting with the Fastly platform"
   homepage "https://github.com/fastly/cli"
-  version "10.11.0"
+  version "10.12.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/fastly/cli/releases/download/v10.11.0/fastly_v10.11.0_darwin-amd64.tar.gz"
-      sha256 "e6acf37f4c2390a57e0366984a5d729da185e13f1066ea44078fee873e739c7d"
+      url "https://github.com/fastly/cli/releases/download/v10.12.0/fastly_v10.12.0_darwin-amd64.tar.gz"
+      sha256 "938ad21e962835bec46b636d20871d8a7634a16c88dcdb09f52530481f47cb8f"
 
       def install
         system "make" if build.head?
@@ -20,8 +20,8 @@ class Fastly < Formula
       end
     end
     on_arm do
-      url "https://github.com/fastly/cli/releases/download/v10.11.0/fastly_v10.11.0_darwin-arm64.tar.gz"
-      sha256 "9774f62c3ac7e27520996872fe458c9dfae07d5ace435ecb69e88dac971ad25a"
+      url "https://github.com/fastly/cli/releases/download/v10.12.0/fastly_v10.12.0_darwin-arm64.tar.gz"
+      sha256 "03bdd18ebda5e3b2fe2472b580b86d8339a1ccfe127e43dbab18aa58cbca21be"
 
       def install
         system "make" if build.head?
@@ -35,8 +35,8 @@ class Fastly < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fastly/cli/releases/download/v10.11.0/fastly_v10.11.0_linux-amd64.tar.gz"
-        sha256 "f7ee9dfbc6fdd444f9acd2a8781edb29593c401b10203d6f0eddf9956a2279af"
+        url "https://github.com/fastly/cli/releases/download/v10.12.0/fastly_v10.12.0_linux-amd64.tar.gz"
+        sha256 "f6a5f8bfe24f47585b7bb849b55eb2b3ee437f3efa341c3541fee511f8fc1ea9"
 
         def install
           system "make" if build.head?
@@ -48,8 +48,8 @@ class Fastly < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fastly/cli/releases/download/v10.11.0/fastly_v10.11.0_linux-arm64.tar.gz"
-        sha256 "3b84c96beb558237bc27ee1feedf8e2c405a6a3049009da60ddd8f5c30e828a8"
+        url "https://github.com/fastly/cli/releases/download/v10.12.0/fastly_v10.12.0_linux-arm64.tar.gz"
+        sha256 "10d7bdb284d7d3f0bc647561546b09e0b47b3326314725d46a82a070810052e5"
 
         def install
           system "make" if build.head?
