@@ -5,12 +5,12 @@
 class Fastly < Formula
   desc "A CLI for interacting with the Fastly platform"
   homepage "https://github.com/fastly/cli"
-  version "14.3.1"
+  version "15.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fastly/cli/releases/download/v14.3.1/fastly_v14.3.1_darwin-amd64.tar.gz"
-      sha256 "c0e53d06f9850c4add127f6d1cdabe5971e0f9c70e52beecfe0da08786359a0d"
+      url "https://github.com/fastly/cli/releases/download/v15.0.0/fastly_v15.0.0_darwin-amd64.tar.gz"
+      sha256 "3f1f95ab632362409cb8aa1d98ff9ca2c9c2ae63c8bb6407c4177eae1a92c2ee"
 
       define_method(:install) do
         system "make" if build.head?
@@ -20,8 +20,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fastly/cli/releases/download/v14.3.1/fastly_v14.3.1_darwin-arm64.tar.gz"
-      sha256 "8026b6e42f208b3a1a0db6c74b3193640c6ec8fefd5845d0e4fb77ca47cd3ec1"
+      url "https://github.com/fastly/cli/releases/download/v15.0.0/fastly_v15.0.0_darwin-arm64.tar.gz"
+      sha256 "5063bb0f0d0ecb915eef4a1ee143728c981d814cd19b317f44267830e9147533"
 
       define_method(:install) do
         system "make" if build.head?
@@ -34,8 +34,8 @@ class Fastly < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fastly/cli/releases/download/v14.3.1/fastly_v14.3.1_linux-amd64.tar.gz"
-      sha256 "1b21f41d37331139ee13dacae443795385baf327ffe9f01c66aafb177984dbb8"
+      url "https://github.com/fastly/cli/releases/download/v15.0.0/fastly_v15.0.0_linux-amd64.tar.gz"
+      sha256 "89c084c13426cbebcd5fe88b427c165ce37e4a07441277d26b5c64fea2652a36"
       define_method(:install) do
         system "make" if build.head?
         bin.install "fastly"
@@ -44,8 +44,8 @@ class Fastly < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fastly/cli/releases/download/v14.3.1/fastly_v14.3.1_linux-arm64.tar.gz"
-      sha256 "b875d226750cb5b4e477e3cc566704e8e416e45bc81ba342a7da901cdfc9c467"
+      url "https://github.com/fastly/cli/releases/download/v15.0.0/fastly_v15.0.0_linux-arm64.tar.gz"
+      sha256 "c0d662c456c78ab9e9dafb5eabcce7b052371e1cf9445fae5203f909d8ab87b5"
       define_method(:install) do
         system "make" if build.head?
         bin.install "fastly"
